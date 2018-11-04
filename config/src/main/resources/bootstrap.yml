@@ -1,0 +1,25 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fandongbo/demo-repo.git
+          username: fandongbo
+          password: fan999259
+          basedir: ~/IdeaProjects/testfiles
+      label: master
+
+eureka:
+  instance:
+    hostname: localhost
+    preferIpAddress: false
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
