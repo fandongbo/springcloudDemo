@@ -11,7 +11,8 @@ spring:
           uri: https://github.com/fandongbo/demo-repo.git
           username: fandongbo
           password: fan999259
-          basedir: ~/IdeaProjects/testfiles
+          basedir: D:\\demo\\
+          force-pull: true
       label: master
 
 eureka:
