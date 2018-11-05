@@ -13,5 +13,10 @@
         <module name="secondservice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="first" target="1.8" />
+      <module name="firstcommon" target="1.8" />
+      <module name="second" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
