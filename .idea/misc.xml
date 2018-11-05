@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/firstservice/pom.xml" />
         <option value="$PROJECT_DIR$/secondservice/pom.xml" />
         <option value="$PROJECT_DIR$/api/pom.xml" />
+        <option value="$PROJECT_DIR$/first/pom.xml" />
+        <option value="$PROJECT_DIR$/second/pom.xml" />
       </list>
     </option>
   </component>
