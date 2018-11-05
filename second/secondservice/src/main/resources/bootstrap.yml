@@ -1,0 +1,12 @@
+server:
+  port: 8301
+
+spring:
+  application:
+    name: secondservice
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      profile: dev

@@ -8,5 +8,15 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: CONFIG_SERVICE
+        service-id: CONFIG-SERVER
       profile: dev
+
+eureka:
+  client:
+    fetchRegistry: false
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    hostname: localhost
+    preferIpAddress: false
