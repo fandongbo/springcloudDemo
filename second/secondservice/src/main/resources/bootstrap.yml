@@ -1,6 +1,16 @@
 server:
   port: 8301
 
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    hostname: localhost
+    preferIpAddress: false
+
 spring:
   application:
     name: secondservice
@@ -8,5 +18,12 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: CONFIG-SERVER
+        service-id: CONFIG
       profile: dev
+      label: master
+
+datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/test
+  username: root
+  password: root
