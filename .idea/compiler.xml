@@ -7,16 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
+        <module name="common" />
         <module name="config" />
         <module name="eureka" />
+        <module name="firstcommon" />
         <module name="firstservice" />
+        <module name="secondcommon" />
         <module name="secondservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="first" target="1.8" />
-      <module name="firstcommon" target="1.8" />
-      <module name="second" target="1.8" />
+      <module name="secondcommon" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

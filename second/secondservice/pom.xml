@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.demo.firstservice</groupId>
-    <artifactId>firstservice</artifactId>
+    <groupId>com.demo.secondservide</groupId>
+    <artifactId>secondservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -14,7 +14,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <name>firstservice</name>
+    <name>secondservice</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -43,25 +43,17 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
-        <!-- 动态刷新配置,更新了Git仓库中的配置文件，那如何让config-client能够及时感知到呢?动态刷新配置-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <!--添加重试机制的依赖,因网络的抖动等原因导致config-client在启动时候访问config-server没有访问成功从而报错，希望config-client能重试几次，故重试机制-->
-        <dependency>
-            <groupId>org.springframework.retry</groupId>
-            <artifactId>spring-retry</artifactId>
+            <groupId>com.demo.second</groupId>
+            <artifactId>secondcommon</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <groupId>com.demo.common</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
