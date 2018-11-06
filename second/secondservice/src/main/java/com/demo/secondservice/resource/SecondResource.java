@@ -8,6 +8,7 @@ import com.demo.secondservice.service.SecondService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -46,7 +47,7 @@ public class SecondResource implements SecondClient {
     @Override
     @ApiOperation("test4")
     @RequestMapping(value = "/secondservice/test4", method = {RequestMethod.POST})
-    public RestResponse<Employee> test4(Employee employee) {
+    public RestResponse<Employee> test4(@RequestBody Employee employee) {
         employee.setNumber(100);
         employee.setName("aaa");
         employee.setAge(24);

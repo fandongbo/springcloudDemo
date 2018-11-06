@@ -1,13 +1,13 @@
 package com.demo.secondservice;
 
+import com.demo.common.FeignClientConfiguration;
+import com.demo.common.RestTemplateConfig;
 import io.swagger.annotations.Api;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.cloud.netflix.feign.FeignClientProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -20,9 +20,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 @EnableEurekaClient
-@EnableFeignClients
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-@Import(value = {FeignClientProperties.FeignClientConfiguration.class})
+@Import(value = {RestTemplateConfig.class, FeignClientConfiguration.class})
 public class SecondserviceApplication {
 
     public static void main(String[] args) {
