@@ -1,12 +1,14 @@
 package com.demo.firstservice.service;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 /**
  * @author fandongbo
  */
 @Service
+@RefreshScope
 public class FirstService {
 
     @Value("${test.value1}")
