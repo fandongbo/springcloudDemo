@@ -46,7 +46,7 @@
             <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.demo.second</groupId>
+            <groupId>com.demo.secondcommon</groupId>
             <artifactId>secondcommon</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -54,6 +54,11 @@
             <groupId>com.demo.firstcommon</groupId>
             <artifactId>firstcommon</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.demo.common</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

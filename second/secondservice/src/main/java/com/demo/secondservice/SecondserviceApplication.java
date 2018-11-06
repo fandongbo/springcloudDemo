@@ -1,4 +1,4 @@
-package com.demo.firstservice;
+package com.demo.secondservice;
 
 import io.swagger.annotations.Api;
 import org.springframework.boot.SpringApplication;
@@ -18,17 +18,16 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@EnableEurekaClient
 @EnableSwagger2
+@EnableEurekaClient
 @EnableFeignClients
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @Import(value = {FeignClientProperties.FeignClientConfiguration.class})
-public class FirstserviceApplication {
+public class SecondserviceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FirstserviceApplication.class, args);
+        SpringApplication.run(SecondserviceApplication.class, args);
     }
-
 
     @Bean
     public Docket baseServiceApi() {

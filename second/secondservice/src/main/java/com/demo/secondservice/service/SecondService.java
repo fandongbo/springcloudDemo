@@ -1,6 +1,5 @@
-package com.demo.secondservide.service;
+package com.demo.secondservice.service;
 
-import com.demo.common.RestResponse;
 import com.demo.firstcommon.client.FirstClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

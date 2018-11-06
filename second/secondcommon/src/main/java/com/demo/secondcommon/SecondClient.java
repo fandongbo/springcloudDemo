@@ -19,10 +19,10 @@ public interface SecondClient {
     @RequestMapping(value = "/secondservice/test2/", method = {RequestMethod.GET})
     RestResponse<String> test2();
 
-    @RequestMapping(value = "secondservice/test3/", method = {RequestMethod.GET})
+    @RequestMapping(value = "/secondservice/test3/", method = {RequestMethod.GET})
     RestResponse<String> test3();
 
-    @RequestMapping(value = "secondservice/test4", method = {RequestMethod.POST})
+    @RequestMapping(value = "/secondservice/test4", method = {RequestMethod.POST})
     RestResponse<Employee> test4(@RequestBody Employee employee);
 
 }

@@ -1,10 +1,10 @@
-package com.demo.secondservide.resource;
+package com.demo.secondservice.resource;
 
 import com.demo.common.Employee;
 import com.demo.common.RestResponse;
 import com.demo.common.RestResponseBuilder;
 import com.demo.secondcommon.SecondClient;
-import com.demo.secondservide.service.SecondService;
+import com.demo.secondservice.service.SecondService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,14 +38,14 @@ public class SecondResource implements SecondClient {
 
     @Override
     @ApiOperation("test3")
-    @RequestMapping(value = "secondservice/test3/", method = {RequestMethod.GET})
+    @RequestMapping(value = "/secondservice/test3/", method = {RequestMethod.GET})
     public RestResponse<String> test3() {
         return new RestResponseBuilder<String>().success(secondService.test3());
     }
 
     @Override
     @ApiOperation("test4")
-    @RequestMapping(value = "secondservice/test4", method = {RequestMethod.POST})
+    @RequestMapping(value = "/secondservice/test4", method = {RequestMethod.POST})
     public RestResponse<Employee> test4(Employee employee) {
         employee.setNumber(100);
         employee.setName("aaa");
