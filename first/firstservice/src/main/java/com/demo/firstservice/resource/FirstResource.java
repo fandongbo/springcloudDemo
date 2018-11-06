@@ -42,4 +42,11 @@ public class FirstResource implements FirstClient {
     public RestResponse<String> test3(@PathVariable(value = "param") String param) {
         return new RestResponseBuilder<String>().success("this is first service method test3, param:" + param);
     }
+
+    @Override
+    @ApiOperation("test4")
+    @RequestMapping(value = "/firstservice/test4/", method = {RequestMethod.GET})
+    public RestResponse<String> test4() {
+        return new RestResponseBuilder<String>().success(firstService.test3());
+    }
 }

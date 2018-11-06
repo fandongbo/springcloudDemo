@@ -1,5 +1,6 @@
 package com.demo.firstservice.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,6 +8,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class FirstService {
+
+    @Value("${test.value1}")
+    private String testValue;
 
     public String test1() {
 
@@ -16,6 +20,10 @@ public class FirstService {
 
     public String test2() {
         return "this is first service method test2";
+    }
+
+    public String test3() {
+        return "value of 'test.value1' in git configuration file is: " + testValue;
     }
 
 }

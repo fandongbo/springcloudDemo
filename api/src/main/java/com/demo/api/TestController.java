@@ -45,6 +45,12 @@ public class TestController {
         return firstClient.test3(param);
     }
 
+    @ApiOperation("firstServiceTest4")
+    @RequestMapping(value = "/firstservice/test4/", method = {RequestMethod.GET})
+    public RestResponse<String> firstServiceTest4() {
+        return firstClient.test4();
+    }
+
     @ApiOperation("secondServiceTest1")
     @RequestMapping(value = "/secondservice/test1/", method = {RequestMethod.GET})
     public RestResponse<String> secondServiceTest1() {

@@ -21,4 +21,6 @@ public interface FirstClient {
     @RequestMapping(value = "/firstservice/test3/{param}", method = {RequestMethod.GET})
     RestResponse<String> test3(@PathVariable(value = "param") String param);
 
+    @RequestMapping(value = "/firstservice/test4/", method = {RequestMethod.GET})
+    RestResponse<String> test4();
 }
