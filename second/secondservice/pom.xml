@@ -9,8 +9,8 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>com.demo.springcloud</groupId>
-        <artifactId>springcloud</artifactId>
+        <groupId>com.demo.second</groupId>
+        <artifactId>second</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
